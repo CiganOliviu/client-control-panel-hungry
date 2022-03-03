@@ -5,7 +5,7 @@ function Footer() {
 
     return (
         <FooterContainer>
-            <p>Header</p>
+            <p>Footer</p>
         </FooterContainer>
     )
 }
