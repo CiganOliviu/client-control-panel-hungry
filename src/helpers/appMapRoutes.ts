@@ -1,5 +1,6 @@
 export const appMapRoutes = {
-    MainSectionRoute: '/',
+    SchemasPage: '/',
     LoginSectionRoute: '/login',
+    CountriesSectionRoute: '/countries',
     ErrorSectionRoute: '*'
 }
