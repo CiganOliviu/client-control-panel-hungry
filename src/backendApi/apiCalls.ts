@@ -11,12 +11,14 @@ export const useCustomFetchCountries = () => {
     return { isLoadingCountries, serverErrorCountries, apiDataCountries };
 }
 
-export const useCustomFetchCountriesDetail = (name: string) => {
+export const useCustomFetchCountryDetail = (id: string | undefined) => {
     const {
-        error: serverErrorCountriesDetail,
-        data: apiDataCountriesDetail,
-        isLoading: isLoadingCountriesDetail,
-    } = useCustomFetch(`${requestUrls.fetchCountries}/${name}`)
+        error: serverErrorCountryDetail,
+        data: apiDataCountryDetail,
+        isLoading: isLoadingCountryDetail,
+    } = useCustomFetch(`${requestUrls.fetchCountries}/${id}`)
 
-    return { isLoadingCountriesDetail, serverErrorCountriesDetail, apiDataCountriesDetail}
+    console.log(`${requestUrls.fetchCountries}/${id}`);
+
+    return { isLoadingCountryDetail, serverErrorCountryDetail, apiDataCountryDetail}
 }
