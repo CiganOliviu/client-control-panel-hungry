@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useCustomFetchCountries } from "../../backendApi/apiCalls";
+import CountriesLister from "../../components/CountriesLister/CountriesLister";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
-
-type Country = { 
-    name: string;
-}
 
 function CountriesPage() {
 
@@ -27,11 +24,7 @@ function CountriesPage() {
     return (
         <div>
             <Header />
-            <h1>Hungry Control Center</h1>
-            <p>Countries Page</p>
-            {
-                countries.map((data: Country) => <h2>{data?.name}</h2>)
-            }
+                <CountriesLister countries={countries} />
             <Footer />
         </div>
     )

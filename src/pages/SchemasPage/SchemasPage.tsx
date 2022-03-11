@@ -7,7 +7,7 @@ function SchemasPage() {
     return (
         <div>
             <Header />
-            <h1>Hungry Control Center</h1>
+            <h1>Hungry Client Control Panel</h1>
             <Footer />
         </div>
     )
