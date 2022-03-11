@@ -6,7 +6,7 @@ function CountriesLister({ countries }: {countries: any}) {
     return (
         <div>
             {
-                countries.map((data: Country) => <h2>{data?.name}</h2>)
+                countries.map((data: Country) => <div key={ data?.name }><a href="#">{ data?.name }</a> <br/></div>)
             }
         </div>
     )

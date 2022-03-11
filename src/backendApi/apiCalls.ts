@@ -10,3 +10,13 @@ export const useCustomFetchCountries = () => {
 
     return { isLoadingCountries, serverErrorCountries, apiDataCountries };
 }
+
+export const useCustomFetchCountriesDetail = (name: string) => {
+    const {
+        error: serverErrorCountriesDetail,
+        data: apiDataCountriesDetail,
+        isLoading: isLoadingCountriesDetail,
+    } = useCustomFetch(`${requestUrls.fetchCountries}/${name}`)
+
+    return { isLoadingCountriesDetail, serverErrorCountriesDetail, apiDataCountriesDetail}
+}
